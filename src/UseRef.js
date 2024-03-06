@@ -51,13 +51,27 @@ function UseRef() {
     // -------------------------------------------------------------------------------
     // State의 경우, 
     const [renderCount, setRenderCount] = useState(0);
-
+    
     const totalRenderCount = useRef(0);
     // useEffect는 매개로 받은 콜백함수를 렌더링 할때마다 실시한다 (= 렌더링마다 실행한다.)
     useEffect(()=> {
         totalRenderCount.current = totalRenderCount.current + 1
         console.log("렌더링된 횟수 : ", totalRenderCount.current);
     })
+    // -------------------------------------------------------------------------------
+    const inputRef = useRef();
+
+    useEffect(()=>{
+        // console.log("inputRef", inputRef);
+        // 화면이 렌더링될때 로그인창에 커서가 활성화(focus)가 되도록 한다
+        inputRef.current.focus();
+    },[])
+
+    const login = () =>{
+        alert(`환영합니다 ${inputRef.current.value}!`);
+        inputRef.current.focus();
+    }
+
   return (
     <>
         <h1>UseRef</h1>
@@ -79,6 +93,12 @@ function UseRef() {
         <hr/>
             <p>Ref로 확인하는 렌더링수 : {totalRenderCount.current}</p>
             <button onClick={ ()=>{ setCount(count+1)}}> 렌더링 실시 </button>
+        <hr/>
+            {/* Ref를 이용한 DOM요소 접근 */}
+            <div>
+                <input type='text' ref={inputRef} placeholder='username' />
+                <button onClick={login} >로그인</button>
+            </div>
 
     </>
   )
