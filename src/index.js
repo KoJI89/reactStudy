@@ -7,6 +7,8 @@ import Reduce from './Reduce';
 import UseStateStudy from './UseStateStudy.js';
 import UseRef from './UseRef';
 import UseContext from './UseContext/UseContext.js'
+import UseMemo from './UseMemo.js';
+import UseMemo2 from './UseMemo2.js';
 
 // rfce
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +18,9 @@ root.render(
     {/* <Reduce/> */}
     {/* <UseStateStudy/> */}
     {/* <UseRef/> */}
-    <UseContext/>
+    {/* <UseContext/> */}
+    {/* <UseMemo/> */}
+    <UseMemo2/>
   </React.StrictMode>
 );
 
