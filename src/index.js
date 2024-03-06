@@ -9,6 +9,8 @@ import UseRef from './UseRef';
 import UseContext from './UseContext/UseContext.js'
 import UseMemo from './UseMemo.js';
 import UseMemo2 from './UseMemo2.js';
+import UseCallback from './UseCallback.js';
+import UseCallback2 from './UseCallback2.js';
 
 // rfce
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,7 +22,9 @@ root.render(
     {/* <UseRef/> */}
     {/* <UseContext/> */}
     {/* <UseMemo/> */}
-    <UseMemo2/>
+    {/* <UseMemo2/> */}
+    {/* <UseCallback/> */}
+    <UseCallback2/>
   </React.StrictMode>
 );
 
