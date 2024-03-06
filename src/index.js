@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Reduce from './Reduce';
-import UseStateStudy from './UseStateStudy';
+import UseStateStudy from './UseStateStudy.js';
 import UseRef from './UseRef';
+import UseContext from './UseContext/UseContext.js'
 
 // rfce
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
     {/* <App /> */}
     {/* <Reduce/> */}
     {/* <UseStateStudy/> */}
-    <UseRef/>
+    {/* <UseRef/> */}
+    <UseContext/>
   </React.StrictMode>
 );
 
